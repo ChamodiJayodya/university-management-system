@@ -1,0 +1,76 @@
+import java.util.*;
+public class a
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int x;
+		System.out.println("Welcome to University Managment System"); 
+		System.out.println("\nPlease select an option to proceed,");
+ 		System.out.println("Press [1] Register as a Student\nPress [2] Register as a Lecturer");
+
+ 		x = sc.nextInt();
+ 		if(x==1)
+ 		{
+ 			Student ob = new Student();
+		}
+ 		else if(x==2)
+ 		{
+ 			Lecturer ob = new Lecturer();
+ 		}
+
+	}
+
+}
+ class Student
+{
+	public Student()
+	{
+		int age,course;
+		String name;
+		String cos[] ={"SENG 11111 - Introduction to Programming","SENG 11112 - Fundamentals of Engineering","SENG 11113 - Data Stuctures and Algorithms"};
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Welcome to University Management System\n\n...");
+		System.out.println("Student Registration\n");
+		System.out.println("Please submit following informations,");
+		System.out.println("1. Name :");
+        name = sc.nextLine();
+        System.out.println("2. Age :");
+        age = sc.nextInt();
+        System.out.println("1. Select course number from following list,\n[1]"+cos[0]+"\n[2]"+cos[1]+"\n[3]"+cos[2]);
+        course = sc.nextInt();
+        
+        System.out.println("Welcome to University Managemen System\n\n...");
+        System.out.printf("Student Registration Completed,\nName      :%s\nAge       :%d\nSubject   :%s",name,age,cos[course-1]);
+
+	}
+
+
+}
+class Lecturer
+{
+	public Lecturer()
+	{
+		int age,course;
+		String name;
+		String cos[] ={"SENG 11111 - Introduction to Programming","SENG 11112 - Fundamentals of Engineering","SENG 11113 - Data Stuctures and Algorithms"};
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Welcome to University Management System\n\n...");
+		System.out.println("Lecturer Registration\n");
+		System.out.println("Please submit following informations,");
+		System.out.println("1. Name :");
+        name = sc.nextLine();
+        System.out.println("2. Age :");
+        age = sc.nextInt();
+        System.out.println("1. Select course number from following list,\n[1]"+cos[0]+"\n[2]"+cos[1]+"\n[3]"+cos[2]);
+        course = sc.nextInt();
+        
+        System.out.println("Welcome to University Managemen System\n\n...");
+        System.out.printf("Lecturer Registration Completed,\nName      :%s\nAge       :%d\nSubject   :%s",name,age,cos[course-1]);
+
+
+	}
+
+}
